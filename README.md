@@ -7,7 +7,7 @@
 - chiedere all'utente la fascia d'età
   - utilizzo il tag select con 3 tag option
 - calcolare il prezzo totale del biglietto
-  - creo un pulsante e aggancio una funzione che sarà chiamata quando accade l'evento click
+  - recupero il pulsante presente nel Dom e aggancio una funzione che sarà chiamata quando accade l'evento click
     - definisco il prezzo del biglietto in base ai chilometri
       - numero chilometri * 0.21
     - applico uno sconto del 20% per i minorenni
