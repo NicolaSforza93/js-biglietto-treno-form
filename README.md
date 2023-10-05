@@ -1,0 +1,17 @@
+## Calcolo del prezzo del biglietto del treno
+- chiedere all'utente nome e cognome
+- chiedere all'utente il numero di chilometri da percorrere
+  - recupero il numero dei km inseriti dall'utente nel campo input
+    - seleziono l'elemento input tramite ID
+    - recupero il valore presente nell'input e lo salvo in una variabile
+- chiedere all'utente la fascia d'età
+  - utilizzo il tag select con 3 tag option
+- calcolare il prezzo totale del biglietto
+  - creo un pulsante e aggancio una funzione che sarà chiamata quando accade l'evento click
+    - definisco il prezzo del biglietto in base ai chilometri
+      - numero chilometri * 0.21
+    - applico uno sconto del 20% per i minorenni
+    - applico uno sconto del 40% per gli over 65
+- stampare la risposta finale nella pagina
+  - prendere l'elemento del Dom dove stamapre il prezzo
+  - modificare innerHTML con prezzo con massimo due decimali
