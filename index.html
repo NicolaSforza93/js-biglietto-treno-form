@@ -3,27 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>Calcolo del prezzo del biglietto del treno</title>
 </head>
 <body>
 
-    <div>
-        <div>
-            <input type="text" name="km" id="num-kilometers">
-        </div>
+    <div class="wrapper p-3">
+        <section class="data-entry">
+            <h2 class="text-uppercase text-light text-center mb-3 fw-bold">Calcola il prezzo del tuo biglietto</h2>
+            <div class="container p-3 bg-light rounded">
+                <div class="row align-items-center">
+                    <div class="col d-flex flex-column align-items-center">
+                        <label for="input-username" class="fw-semibold mb-2">Nome e Cognome</label>
+                        <input type="text" id="input-username" class="form-control fw-medium">
+                    </div>
+                    <div class="col d-flex flex-column align-items-center">
+                        <label for="num-kilometers" class="fw-semibold mb-2">Km da percorrere</label>
+                        <input type="text" name="km" id="num-kilometers" class="form-control fw-medium">
+                    </div>
+                    <div class="col d-flex flex-column align-items-center">
+                        <label for="age-range" class="fw-semibold mb-2">Fascia d'età</label>
+                        <select name="age-range" id="age-range" class="form-select fw-medium">
+                            <option value="0">Minorenne</option>
+                            <option selected value="1">Maggiorenne</option>
+                            <option value="2">Over65</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button mt-4 d-flex justify-content-center gap-3">
+                    <button class="btn bg-dark-subtle btn-sm fw-bold border-dark-subtle" id="btn-calc">Genera</button>
+                    <button class="btn bg-dark-subtle btn-sm fw-bold border-dark-subtle" id="btn-reset">Annulla</button>
+                </div>
+            </div>
+        </section>
 
-        <div>
-            <select name="age-range" id="age-range">
-                <option value="0">Minorenne</option>
-                <option value="1">Maggiorenne</option>
-                <option value="2">Over65</option>
-            </select>
-        </div>
-
-        <div>
-            <button id="btn-calc">Genera</button>
-        </div>
+        <section class="ticket p-3">
+            <h2 class="text-uppercase text-light text-center mb-0 fw-bold">Il tuo biglietto</h2>
+            <div class="container p-3 bg-light">
+                <div class="row border border-secondary border-end-0 border-start-0">
+                    <div class="col-4 bg-secondary py-2">
+                        <h6 class="text-uppercase mb-0 fw-bold">Nome passeggero</h6>
+                        <span id="passenger" class="fw-bold"></span>
+                    </div>
+                    <div class="col-2 py-2">
+                        <h6 class="mb-4 fw-bold">Offerta</h6>
+                        <span class="fw-medium">Biglietto standard</span>
+                    </div>
+                    <div class="col-2 py-2">
+                        <h6 class="mb-4 fw-bold">Carrozza</h6>
+                        <span id="carriage" class="fw-medium"></span>
+                    </div>
+                    <div class="col-2 py-2">
+                        <h6 class="mb-4 fw-bold">Codice CP</h6>
+                        <span id="CP-code" class="fw-medium"></span>
+                    </div>
+                    <div class="col-2 py-2">
+                        <h6 class="mb-4 fw-bold">Costo biglietto</h6>
+                        <span id="price" class="fw-medium"></span>
+                    </div>
+                </div>
+            </div>
+        </section>       
     </div>
 
 

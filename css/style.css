@@ -1,5 +1,17 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+.wrapper {
+    background-color: #AA2A50;
 }
+
+label {
+    color: #AA2A50;
+}
+
+#num-kilometers, #input-username, #age-range {
+    border-color: #AA2A50;
+}
+
+#btn-calc, #btn-reset {
+    color: #AA2A50;
+}
+
